@@ -7,6 +7,8 @@ const AdminRoute = require("./Routes/auth")
 const VideoRoute = require("./Routes/video")
 const GalleryRoute = require("./Routes/gallery")
 const JoinRoute = require("./Routes/join")
+const TeamRoute = require("./Routes/team")
+
 
 // const TestRoute = require("./Routes/test")
 const FeedBackRoute = require("./Routes/feedback")
@@ -34,6 +36,7 @@ app.use("/api/feedback",FeedBackRoute)
  app.use("/api/join",JoinRoute)
 app.use("/api/gallery",GalleryRoute)
 app.use("/api/videos",VideoRoute)
+app.use("/api/teams",TeamRoute)
 app.use("/api/auth",AdminRoute)
 
 
@@ -45,3 +48,4 @@ app.listen(8000,()=>{
     
     console.log(`Server Started at Port 8000`)
 })
+

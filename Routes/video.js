@@ -4,6 +4,7 @@ router.post("/createvideos",async(req,res)=>{
     try{
         const videos = new Videos(req.body)
         const savedvideo = await videos.save()
+        
         res.status(200).json(savedvideo)
     }catch(err){
         res.status(500).json(err)
